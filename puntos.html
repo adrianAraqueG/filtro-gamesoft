@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAMESOFT | FIDELIDAD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-dark mb-5">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-md">
+                <div class="container-fluid">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/icono.png" alt="logo" width="50px"> | Puntos
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="clientes.html">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="juegos.html">Juegos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comprar.html">Comprar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="puntos.html">Fidelización</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+
+            <h2 class="text-center mb-5">Módulo Fidelización</h2>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col col-md-12">
+                    <!-- OPCIONES -->
+                    <div class="row fix-options mb-2">
+                        <div class="col col-md-12">
+                            <div class="input-group mb-3 me-3">
+                                <select class="input-group-text" id="buscar-por">
+                                    <option value="id">ID</option>
+                                    <option value="name">Nombres</option>
+                                    <option value="surname">Apellidos</option>
+                                </select>
+                                <input class="form-control" type="text" id="buscar" placeholder="Buscar por...">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- TABLA -->
+                    <div class="table-responsive">
+                        <table class="table table-secondary table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Puntos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenido-tabla">
+                                <tr>
+                                    <td>1062555888</td>
+                                    <td>Pepito</td>
+                                    <td>Pérez</td>
+                                    <td>2515</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- SCRIPTS -->
+    <script src="js/puntos.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

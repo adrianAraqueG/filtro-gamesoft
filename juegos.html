@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAMESOFT | JUEGOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-dark mb-5">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-md">
+                <div class="container-fluid">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/icono.png" alt="logo" width="50px"> | Juegos
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="clientes.html">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="juegos.html">Juegos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comprar.html">Comprar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="puntos.html">Fidelización</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+
+            <h2 class="text-center mb-5">Módulo Videojuegos</h2>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col col-md-12">
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button id="btn-open-modal" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#abrir-modal">Agregar</button>
+                    </div>
+
+                    <!-- TABLA -->
+                    <div class="table-responsive">
+                        <table class="table table-secondary table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Temática</th>
+                                    <th>Valor</th>
+                                    <th>Puntos</th>
+                                    <th>OPTS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenido-tabla">
+                                <tr>
+                                    <td>01</td>
+                                    <td>Diablo IV</td>
+                                    <td>Fantasía</td>
+                                    <td>70 USD</td>
+                                    <td>100</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- MAIN MODAL -->
+    <div class="modal fade" id="abrir-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="abrir-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modal-title">Añadir Juego</h1>
+                    <button id="cerrar-modal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <form action="" class="form-control border-none p-0" id="form">
+    
+                        <input id="nombre"type="text" class="form-control mt-2" required placeholder="Nombre">
+                        <select class="form-select mt-2" id="categoria">
+                            <option value="No Especificada" selected>Categoria</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            <option value="Fantasía">Fantasía</option>
+                            <option value="Terror">Terror</option>
+                        </select>
+                        <div class="input-group mt-2">
+                            <span class="input-group-text">USD</span>
+                            <input required class="form-control" type="number" id="valor-licencia" placeholder="Valor de Licencia">
+                        </div>
+                        <input id="puntos"type="number" class="form-control mt-2" required placeholder="Puntos">
+    
+                        <div class="d-grid gap-2 mt-4">
+                            <button class="btn btn-success" type="submit" id="form-button">Añadir</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="modal-footer text-center">
+                    <span>Campus GameSoft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- SCRIPTS -->
+    <script src="js/juegos.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
